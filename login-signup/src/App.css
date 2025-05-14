@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    width:300px;
+    border:2px solid black;
+    border-radius: 10px;
+    gap:10px;
+    margin: 0 auto;
+}
+.btn{
+  display: flex;
+  gap:7px;
+}
+input{
+    padding: 7px 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+label{
+  
+}
