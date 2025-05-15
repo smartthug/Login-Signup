@@ -125,7 +125,7 @@ const forgotPassword=async (req, res) => {
         user.resetPasswordExpires = tokenexpires // 30 minutes
         await user.save();
        res.status(201).json({ success:true,message:"Reset Password" });
-       await sendRestPasswordEmail(user.email,`${process.env.CLIENT}reset-password/${resetToken}`); 
+       await sendRestPasswordEmail(user.email,`${process.env.CLIENT}/reset-password/${resetToken}`); 
     } catch (error) {
          res.status(500).json({
       success: false,
