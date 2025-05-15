@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import './Database/mongodb.js';
 import cors from 'cors';
+import { authRouter } from './Router/auth_route.js';
 
 const app = express();
 dotenv.config();
@@ -21,6 +22,8 @@ app.use(express.static(path.join(__dirname, '..', 'login-signup', 'dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'login-signup', 'dist', 'index.html'));
 });
+
+app.use("/auth",authRouter);
 
 app.listen(PORT, () => {
   
