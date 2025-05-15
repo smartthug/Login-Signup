@@ -7,6 +7,8 @@ import cors from 'cors';
 import { authRouter } from './Router/auth_route.js';
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
