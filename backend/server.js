@@ -16,11 +16,14 @@ const app = express();
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+}));
 app.use('/auth', authRouter);
 
 // Import your database connection
 import './Database/mongodb.js';
+import { lstat } from 'fs';
 // console.log(__dirname)
 // console.log(__filename)
 // if(process.env.NODE_ENV==='production'){

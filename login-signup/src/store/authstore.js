@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
 
-const Server_url = "http://localhost:5000/auth";
+const Server_url = "https://login-signup-puw3.onrender.com/auth";
 
 export const useAuthStore = create((set) => ({
   user: null,
