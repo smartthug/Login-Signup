@@ -45,22 +45,29 @@ README.md
 git clone https://github.com/your-username/login-signup-auth.git
 cd login-signup-auth
 cd server
+```
+### 2. Start the Backend
 
+```
 npm install
 # Add your .env file (see below)
 npm run dev
-
+```
+### Create a .env file in /server with the following:
+```
 PORT=5000
 MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
-
+```
+### 3. Start the Frontend
+```
 cd ../client
 npm install
 npm run dev
-
-🔑 API Routes (Backend)
+```
+##🔑 API Routes (Backend)
 POST /api/signup → User registration + OTP
 
 POST /api/verify → OTP verification
