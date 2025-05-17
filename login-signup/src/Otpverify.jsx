@@ -63,7 +63,7 @@ const Otpverify = () => {
             <h2 className="text-center text-white">Code has been sent to your email</h2>
 
             <div className="space-y-4 md:space-y-6">
-              <div className="flex justify-center space-x-2">
+              <div className="flex justify-center gap-1.5">
                 {otp.map((digit, index) => (
                   <input
                     key={index}
@@ -73,9 +73,9 @@ const Otpverify = () => {
                     value={digit}
                     onChange={(e) => handleChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
-                    className="w-12 h-12 text-center text-xl border rounded-lg focus:ring-2 
+                    className="w-8 h-8 text-center text-xl border rounded-lg focus:ring-2 
                     focus:outline-none 
-                focus:border-[#d4c9be] focus:ring-[#d4c9be]  "
+                focus:border-[#d4c9be] focus:ring-[#d4c9be]  md:w-10 md:h-10 lg:w-13 lg:w-13"
                   />
                 ))}
               </div>
